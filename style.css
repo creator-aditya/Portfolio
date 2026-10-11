@@ -418,7 +418,15 @@ p {
 }
 
 .project-card {
-    display: block;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "thumb header"
+        "thumb excerpt"
+        "thumb tags"
+        "thumb actions";
+    column-gap: 24px;
+    align-content: start;
     width: 100%;
     padding: 24px;
     border: 1px solid #ececec;
@@ -435,18 +443,19 @@ p {
 }
 
 .project-thumb {
+    grid-area: thumb;
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     height: auto;
-    margin-bottom: 18px;
+    align-self: start;
     border-radius: 12px;
     object-fit: cover;
-    object-position: center;
     background: #f4f4f7;
 }
 
 .project-header {
+    grid-area: header;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -475,6 +484,7 @@ p {
 }
 
 .project-excerpt {
+    grid-area: excerpt;
     margin: 12px 0 0;
     color: #555;
     font-size: 14px;
@@ -482,6 +492,7 @@ p {
 }
 
 .project-tags {
+    grid-area: tags;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -499,6 +510,7 @@ p {
 }
 
 .project-actions {
+    grid-area: actions;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -865,5 +877,23 @@ footer {
     }
     .edu-item .year {
         text-align: left;
+    }
+}
+
+/* Projects: stack the card on small screens */
+@media (max-width: 640px) {
+    .project-card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "thumb"
+            "header"
+            "excerpt"
+            "tags"
+            "actions";
+        row-gap: 4px;
+    }
+    .project-thumb {
+        aspect-ratio: 16 / 9;
+        margin-bottom: 12px;
     }
 }
