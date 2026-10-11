@@ -437,10 +437,13 @@ p {
 .project-thumb {
     display: block;
     width: 100%;
+    aspect-ratio: 16 / 9;
     height: auto;
     margin-bottom: 18px;
     border-radius: 12px;
     object-fit: cover;
+    object-position: center;
+    background: #f4f4f7;
 }
 
 .project-header {
