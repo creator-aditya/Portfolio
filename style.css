@@ -406,6 +406,134 @@ p {
 }
 
 
+/* --------------------------------------------------------------- */
+/* Projects                                                         */
+/* --------------------------------------------------------------- */
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 30px 0;
+}
+
+.project-card {
+    display: block;
+    width: 100%;
+    padding: 24px;
+    border: 1px solid #ececec;
+    border-radius: 16px;
+    background: #fff;
+    color: inherit;
+    transition: 0.35s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: #d9d9d9;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.06);
+}
+
+.project-thumb {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.project-title {
+    margin: 0;
+    color: #1d1d1f;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.project-status {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border: 1px solid #c9e9d1;
+    border-radius: 999px;
+    background: #e9f8ee;
+    color: #1f7a3f;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.project-excerpt {
+    margin: 12px 0 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.project-tag {
+    padding: 4px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: #fafafa;
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 999px;
+    background: #fafafa;
+    color: #444;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: translateY(-3px);
+    border-color: #d9d9d9;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.project-btn.primary {
+    background: #111;
+    border-color: #111;
+    color: #fff;
+}
+
+.project-btn.primary:hover {
+    background: #000;
+}
+
+
 .education {
     display: flex;
     flex-direction: column;
